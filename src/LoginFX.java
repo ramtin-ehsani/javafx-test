@@ -21,55 +21,13 @@ public class LoginFX extends Application {
         launch(args);
     }
 
+    static Stage mainWindow;
     @Override
     public void start(Stage primaryStage) {
-        //Group Objects
-        Text text = new Text("Email");
-        Text text1 = new Text("Password");
-        text.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR,20));
-        text1.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR,20));
+        mainWindow = primaryStage;
+        mainWindow.setTitle("Login");
+        mainWindow.setScene(LoginScene.LoginScene());
 
-        TextField textField = new TextField();
-        PasswordField passwordField = new PasswordField();
-
-//        EventHandler<MouseEvent> eventHandler = new EventHandler<MouseEvent>() {
-//            @Override
-//            public void handle(MouseEvent event) {
-//                javafxDemo javafxDemo = new javafxDemo();
-//                javafxDemo.start(primaryStage);
-//            }
-//        };
-
-        Button button1 = new Button("Cancel");
-        Button button2 = new Button("Submit");
-
-//        button2.addEventFilter(MouseEvent.MOUSE_CLICKED,eventHandler);
-
-        button1.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
-        button2.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white");
-
-        GridPane gridPane = new GridPane();
-        gridPane.setMinSize(400,200);
-        gridPane.setPadding(new Insets(10, 10, 10, 10));
-        gridPane.setHgap(5);
-        gridPane.setVgap(5);
-        gridPane.setAlignment(Pos.CENTER);
-
-        gridPane.add(text,0,0);
-        gridPane.add(textField,1,0);
-        gridPane.add(text1,0,1);
-        gridPane.add(passwordField,1,1);
-        gridPane.add(button1,0,2);
-        gridPane.add(button2,1,2);
-
-        //Scene
-        Scene scene = new Scene(gridPane);
-
-        //Stage
-        primaryStage.setTitle("Login");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
-
+        mainWindow.show();
     }
 }
