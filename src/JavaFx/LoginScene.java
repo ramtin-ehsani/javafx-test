@@ -1,10 +1,10 @@
+package JavaFx;
+
+import JavaFx.LoginFX;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.*;
 
@@ -51,7 +51,7 @@ public class LoginScene extends LoginFX {
         button2.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white");
 
         GridPane gridPane = new GridPane();
-        gridPane.setMinSize(1400,800);
+        gridPane.setMinSize(1100,800);
         gridPane.setPadding(new Insets(10, 10, 10, 10));
         gridPane.setHgap(5);
         gridPane.setVgap(5);
@@ -68,7 +68,7 @@ public class LoginScene extends LoginFX {
         gridPane.add(text2,0,3);
         gridPane.add(textFlow,1,3);
 
-//        String image = LoginFX.class.getResource("bg.png").toExternalForm();
+//        String image = JavaFx.LoginFX.class.getResource("bg.png").toExternalForm();
 //        gridPane.setStyle("-fx-background-image: url('" + image + "'); " +
 //                "-fx-background-position: center center; " +
 //                "-fx-background-repeat: stretch;");

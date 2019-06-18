@@ -1,3 +1,5 @@
+package JavaFx;
+
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -6,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
@@ -25,8 +28,9 @@ public class LoginFX extends Application {
     @Override
     public void start(Stage primaryStage) {
         mainWindow = primaryStage;
-        mainWindow.setTitle("Login");
+        mainWindow.setTitle("Messenger");
         mainWindow.setScene(LoginScene.LoginScene());
+        mainWindow.getIcons().add(new Image("file:logo.png"));
 
         mainWindow.show();
     }
